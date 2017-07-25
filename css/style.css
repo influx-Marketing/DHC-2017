@@ -271,8 +271,8 @@ footer {
 	margin-top: 0.6rem;
 	text-align: center;
 	margin-top: 1.5rem;
-	font-size: 1.5rem;
-	line-height: 1;
+	font-size: 2rem;
+	line-height: 1.2;
 	z-index: 1000;
 }
 
@@ -305,7 +305,7 @@ footer a {
 footer svg {
 	width: 2rem;
 	margin-left: 1.2rem;
-	margin-top: 0.4rem;
+	margin-top: 0.75rem;
 	position: absolute;
 }
 
@@ -318,7 +318,7 @@ footer img:hover {
 }
 
 footer p {
-	margin-top: 5rem;
+	margin-top: 4rem;
 }
 
 footer a:focus,
@@ -333,6 +333,18 @@ footer a:hover svg .black-arrow,
 footer a:focus svg .black-arrow {
 	stroke: #f76c6c;
 	fill: #f76c6c;
+}
+
+.arrow:hover {
+	cursor: pointer;
+}
+
+.hover-yellow {
+	top: 10.5rem !important;
+}
+
+.hover-green {
+	top: 11rem !important;
 }
 
 .green-footer:focus,
@@ -520,12 +532,11 @@ footer a:focus svg .black-arrow {
 	position: absolute;	
 	left: 5rem;
 	visibility: hidden;
-	width: 25rem;
+	width: 42rem;
 }
 
 .hover-copy,
 .hover-link {
-	width: 50rem;
 	font-size: 2.5rem;	
 }
 
@@ -536,13 +547,13 @@ footer a:focus svg .black-arrow {
 }
 
 .hover-copy {
-	top: 10rem;
+	top: 14.5rem;
 	font-weight: 600;
 }
 
 .hover-link {
 	color: #000;
-	top: 19rem;
+	top: 23.5rem;
 	text-decoration: underline;
 }
 
