@@ -1,6 +1,6 @@
 // BCP SVG #TWO
 $(document).ready(function() {
-  $("#blueCircleBCP2").hover(
+  $("#blueChartBCP2").hover(
     function() {
       $("#redChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
       $("#spottyChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
@@ -13,7 +13,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-  $("#redCircleBCP2").hover(
+  $("#redChartBCP2").hover(
     function() {
       $("#blueChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
       $("#spottyChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
@@ -26,7 +26,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-  $("#spottyCircleBCP2").hover(
+  $("#spottyChartBCP2").hover(
     function() {
       $("#blueChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
       $("#redChartBCP2").not(this).fadeTo(800, 0.2, 'linear');
@@ -146,6 +146,67 @@ $(document).ready(function() {
     function() {
       $("#blackChartDR2").fadeTo(900, 1, 'linear');
       $("#whiteChartDR2").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+// DR SVG #THREE
+$(document).ready(function() {
+  $("#blackChartDR3").hover(
+    function() {
+      $("#greenChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greyChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#yellowChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#greenChartDR3").fadeTo(900, 1, 'linear');
+      $("#greyChartDR3").fadeTo(900, 1, 'linear')
+      $("#yellowChartDR3").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#greenChartDR3").hover(
+    function() {
+      $("#blackChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greyChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#yellowChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#blackChartDR3").fadeTo(900, 1, 'linear');
+      $("#greyChartDR3").fadeTo(900, 1, 'linear')
+      $("#yellowChartDR3").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#greyChartDR3").hover(
+    function() {
+      $("#blackChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greenChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#yellowChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#blackChartDR3").fadeTo(900, 1, 'linear');
+      $("#greenChartDR3").fadeTo(900, 1, 'linear')
+      $("#yellowChartDR3").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#yellowChartDR3").hover(
+    function() {
+      $("#greenChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greyChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+      $("#blackChartDR3").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#greenChartDR3").fadeTo(900, 1, 'linear');
+      $("#greyChartDR3").fadeTo(900, 1, 'linear')
+      $("#blackChartDR3").fadeTo(900, 1, 'linear');
     }
   );
 })

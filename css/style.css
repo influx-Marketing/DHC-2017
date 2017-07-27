@@ -347,6 +347,11 @@ footer a:focus svg .black-arrow {
 	top: 11rem !important;
 }
 
+p.hover-copy,
+p.hover-copy:hover {
+	color: #fff;
+}
+
 .green-footer:focus,
 .green-footer:hover {
 	color: #37c0aa;
@@ -629,8 +634,8 @@ footer a:focus svg .black-arrow {
 }	
 
 /*DR SVG Styles*/
-#redCircleBCP2, #spottyCircleBCP2,
-#blueCircleBCP2, #redCircleBCP3,
+#redChartBCP2, #spottyChartBCP2,
+#blueChartBCP2, #redCircleBCP3,
 #spottyCircleBCP3, #blueCircleBCP4,
 #redCircleBCP4, #greenCircleDR1,
 #yellowCircleDR1, #whiteCircleDR2,
@@ -656,7 +661,7 @@ footer a:focus svg .black-arrow {
 #blackCircleC7, #orangeCircleC7,
 #greenCircleC8, #spottyCircleC8,
 #greyCircleC8, #blackCircleC8
- {
+{
 	cursor: pointer;
 }
 
@@ -815,31 +820,37 @@ svg#graphEightCyber {
 		font-size: 2.2rem;
 	}
 
-	#blue-draggable {
-		top: 8rem;
+	#blue-draggable, #yellow-draggable, #green-draggable {
+		display: none;
 	}
 
-	#yellow-draggable {
-		top: 35rem;
+	.intro {
+		margin-top: 13rem;
+		width: 64%;
 	}
 
-	#green-draggable {
-		left: 21rem;
-		top: 71rem;
-	}	
-}
+	@media only screen and (max-width: 735px) {
+		#blue-draggable {
+			top: 11rem;
+			left: 19rem;
+		}
 
-@media only screen and (max-width: 735px) {
-	#blue-draggable {
-		top: 11rem;
-		left: 19rem;
-	}
+		#yellow-draggable {
+			top: 39rem;
+		}
 
-	#yellow-draggable {
-		top: 39rem;
-	}
+		#green-draggable {
+			top: 76rem;
+		}
+	} 
 
-	#green-draggable {
-		top: 76rem;
+	@media only screen and (max-width: 415px) {
+		.intro, .bcp-copy {
+			font-size: 1.6rem;
+		}
+
+		footer, .vertical-title p, .vertical-title img, .empty-white {
+			font-size: 1.5rem;
+		}
+
 	}
-} 

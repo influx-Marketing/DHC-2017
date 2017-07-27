@@ -60,11 +60,13 @@
 				<div class="arrow">
 					<img class="white-arrow-blue" src="img/whiteArrow.svg">
 				</div>
-				<div class="box blue blue-box">
-					<p class="hover-title">Business Continuity Planning</p>
-					<p class="hover-copy">53% of businesses now have a business continuity plan in place.</p>
-					<a class="hover-link" href="sections/bcp.html">See the full Business Continuity Planning results</a> 
-				</div>
+				<a href="sections/bcp.html">
+					<div class="box blue blue-box">
+						<p class="hover-title">Business Continuity Planning</p>
+						<p class="hover-copy">53% of businesses now have a business continuity plan in place.</p>
+						<a class="hover-link" href="sections/bcp.html">See the full Business Continuity Planning results</a> 
+					</div>
+				</a>
 				<div class="graph">
 					<img src="img/graphFourBcp.svg">
 				</div>
@@ -74,11 +76,13 @@
 				<div class="arrow">
 					<img class="white-arrow-yellow" src="img/whiteArrow.svg">
 				</div>
-				<div class="box yellow yellow-box">
-					<p class="hover-title">Disaster Recovery</p>
-					<p class="hover-copy hover-yellow">43% of businesses have tested their disaster recovery plan in the last year.</p>
-					<a class="hover-link" href="sections/dr.html">See the full Disaster Recovery results</a> 
-				</div>
+				<a href="sections/dr.html">
+					<div class="box yellow yellow-box">
+						<p class="hover-title">Disaster Recovery</p>
+						<p class="hover-copy hover-yellow">43% of businesses have tested their disaster recovery plan in the last year.</p>
+						<a class="hover-link" href="sections/dr.html">See the full Disaster Recovery results</a> 
+					</div>
+				</a>
 				<div class="graph">
 					<img src="img/graphFiveDR.svg">
 				</div>
@@ -88,11 +92,13 @@
 				<div class="arrow">
 					<img class="white-arrow-green" src="img/whiteArrow.svg">
 				</div>
-				<div class="box green-box new">
-					<p class="hover-title">Cyber Security</p>
-					<p class="hover-copy hover-green">20% of businesses were hit with a cyber attack in the last 12 months.</p>
-					<a class="hover-link" href="sections/cyber.html">See full Cyber Security results</a> 
-				</div>
+				<a href="sections/cyber.html">
+					<div class="box green-box new">
+						<p class="hover-title">Cyber Security</p>
+						<p class="hover-copy hover-green">31% of businesses were hit with a cyber attack in the last 12 months.</p>
+						<a class="hover-link" href="sections/cyber.html">See full Cyber Security results</a> 
+					</div>
+				</a>
 				<div class="graph">
 					<img src="img/graphOneCyber.svg">
 				</div>
@@ -121,6 +127,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/classie.js"></script>
 <script>
+//Allows draggables container box to be a hyperlink 
+$(document).ready(function () {
+
+	$(".box").click(function(){
+		window.location = $(this).find("a:first").attr("href");
+		return false;
+	});
+
+});
+
 // Pushes menu out from right
 var menuRight = document.getElementById( 'cbp-spmenu-s2' ),	
 showRightPush = document.getElementById( 'showRightPush' ),
