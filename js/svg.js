@@ -1,4 +1,28 @@
-// HOMEPAGE SVG
+// HOMEPAGE TIP SVG
+$(document).ready(function() {
+  $("#blueHoverTip").hover(
+    function() {
+      $("#redChartTip").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartTip").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#redHoverTip").hover(
+    function() {
+      $("#blueChartTip").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#blueChartTip").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+
+// HOMEPAGE DEMOGRAPHIC SVG
 $(document).ready(function() {
   $("#whiteCircleOneH1").hover(
     function() {
