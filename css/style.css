@@ -39,7 +39,6 @@
 body, 
 html { padding: 0; margin: 0;}
 
-
 .white {
 	color: #fff;
 }
@@ -47,6 +46,11 @@ html { padding: 0; margin: 0;}
 .overflow,
 .push {
 	overflow: hidden;
+}
+
+.display,
+.mobile {
+	display: none;
 }
 
 .position {
@@ -253,12 +257,27 @@ a {
 	left: -28rem;
 }
 
+.db-logo {
+	width: 22rem;
+	margin-left: 5rem;
+	position: absolute;
+	bottom: 4rem;
+}
+
 /* Transitions */
 .cbp-spmenu,
 .cbp-spmenu-push {
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+}
+
+.menu-position a,
+.menu-position a:hover,
+.menu-position a:active,
+.menu-position a:visited,
+.menu-position a:focus {
+	text-decoration: none;
 }
 
 /* Footer */
@@ -268,12 +287,12 @@ footer {
 	position: absolute;
 	height: 13rem;
 	width: 100%;
-	margin-top: 0.6rem;
 	text-align: center;
 	margin-top: 1.5rem;
-	font-size: 2rem;
-	line-height: 1.2;
+	font-size: 1.75rem;
+	line-height: 1;
 	z-index: 1000;
+	overflow: hidden;
 }
 
 .dark-footer {
@@ -305,7 +324,7 @@ footer a {
 footer svg {
 	width: 2rem;
 	margin-left: 1.2rem;
-	margin-top: 0.75rem;
+	margin-top: 0.5rem;
 	position: absolute;
 }
 
@@ -318,7 +337,7 @@ footer img:hover {
 }
 
 footer p {
-	margin-top: 4rem;
+	margin-top: 4.5rem;
 }
 
 footer a:focus,
@@ -378,8 +397,7 @@ p.hover-copy:hover {
 }
 
 .vertical-title p, 
-.vertical-title img,
-.empty-white {
+.vertical-title img {
 	white-space: nowrap;
 	font-family:'Gordita';
 	position: fixed;
@@ -410,16 +428,9 @@ p.hover-copy:hover {
 	top: 42%;
 }
 
-.empty-white {
-	background-color: white;
-	width: 300px;
-	z-index: 1000;
-	height: 46px;
-	top: 73%;
-}
-
 .logo {
-	position: absolute;
+	/*position: absolute;*/
+	position: fixed;
 	font-weight: 600;
 	top: 3rem;
 	left: 4rem;
@@ -445,14 +456,15 @@ p.hover-copy:hover {
 }
 
 .intro-graph img {
-	width: 75%;
-	padding: 5rem;
+	width: 82%;
+	padding: 3rem;
 }
 
 /*Draggable boxes*/
 #blue-draggable,
 #yellow-draggable,
-#green-draggable {
+#green-draggable,
+#red-draggable {
 	display: block;
 	text-align: left;
 	position: absolute;
@@ -472,8 +484,17 @@ p.hover-copy:hover {
 }
 
 #green-draggable {
-	left: 107rem;
+	left: 100rem;
 	top: 56rem;
+}
+
+#red-draggable {
+	left: 115rem;
+	top: 4rem;
+	width: 56rem;
+	height: 37rem;
+	background-color: #f76c6c;
+	z-index: 100;
 }
 
 .box {
@@ -520,7 +541,8 @@ p.hover-copy:hover {
 	padding: 1rem;
 }
 
-.graph:hover {
+.graph:hover,
+#red-draggable {
 	cursor: move;
 }
 
@@ -660,7 +682,13 @@ p.hover-copy:hover {
 #spottyCircleC7, #greenCircleC7,
 #blackCircleC7, #orangeCircleC7,
 #greenCircleC8, #spottyCircleC8,
-#greyCircleC8, #blackCircleC8
+#greyCircleC8, #blackCircleC8,
+#whiteCircleOneH1, #whiteCircleTwoH1,
+#spottyCircleOneH1, #spottyCircleTwoH1,
+#redCircleOneH1, #redCircleTwoH1,
+#redChartBCP1, #spottyChartBCP1,
+#orangeChartC9, #blackChartC9,
+#greenChartC9
 {
 	cursor: pointer;
 }
@@ -681,12 +709,21 @@ svg#graphFourCyber,
 svg#graphFiveCyber,
 svg#graphSixCyber,
 svg#graphSevenCyber,
-svg#graphEightCyber {
+svg#graphEightCyber,
+svg#graphNineCyber,
+svg#graphHomepage {
 	padding: 2rem;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+
+@media only screen and (max-width: 1690px) { 
+	#red-draggable {
+		left: 92rem;
+		top: 4rem;
+	}
 }
 
 @media only screen and (max-width: 1670px) { 
@@ -698,15 +735,31 @@ svg#graphEightCyber {
 
 @media only screen and (max-width: 1525px) { 
 	#green-draggable {
-		left: 82rem;
-		top: 62rem;
+		left: 76rem;
+		top: 72rem;
+	}
+
+	#yellow-draggable {
+		left: 19rem;
+		top: 45rem;
+	}
+
+	#blue-draggable {
+		left: 12rem;
+	}
+
+	#red-draggable {
+		left: 76rem;
 	}
 } 
 
 @media only screen and (max-width: 1430px) { 
 	#green-draggable {
-		left: 78rem;
+		left: 74rem;
 		top: 69rem;
+	}
+	#red-draggable {
+		left: 69rem;
 	}
 } 
 
@@ -715,6 +768,10 @@ svg#graphEightCyber {
 		left: 73rem;
 		top: 79rem;
 	}
+	#red-draggable {
+		left: 60rem;
+		top: 35rem;
+	}
 } 
 
 @media only screen and (max-width: 1350px) { 
@@ -722,17 +779,32 @@ svg#graphEightCyber {
 		left: 59rem;
 		top: 91rem;
 	}
+	#red-draggable {
+		left: 49rem;
+		top: 38rem;
+	}
 }
 
 @media only screen and (max-width: 1220px) { 
 	#green-draggable {
+		left: 40rem;
+	}
+	#yellow-draggable{
+		left: 11rem;
+	}
+	#red-draggable {
 		left: 44rem;
+		top: 39rem;
 	}
 } 
 
 @media only screen and (max-width: 1065px) { 
 	#green-draggable {
 		left: 36rem;
+	}
+	#red-draggable {
+		left: 33rem;
+		top: 57rem;
 	}
 } 
 
@@ -756,6 +828,10 @@ svg#graphEightCyber {
 		width: 31rem;
 	}
 
+	.hover-yellow, .hover-green {
+		top: 8.5rem !important;
+	}
+
 	.graph {
 		width: 42rem;
 		height: 30rem;
@@ -768,8 +844,13 @@ svg#graphEightCyber {
 	.box:hover,
 	#yellow-draggable, 
 	#blue-draggable,
-	#green-draggable {
+	#green-draggable,
+	#red-draggable {
 		width: 46rem;
+	}
+
+	#red-draggable {
+		height: 30rem;
 	}
 
 	.hover-title {
@@ -807,20 +888,33 @@ svg#graphEightCyber {
 
 @media only screen and (max-width: 885px) { 
 	#green-draggable {
-		left: 27rem;
+		left: 20rem;
+		top: 92rem; 
 	}
 
 	#blue-draggable {
 		left: 23rem;
 	}
+
+	#red-draggable {
+		left: 17rem;
+	}
 }
 
 @media only screen and (max-width: 769px) { 
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
 	.intro, .bcp-copy {
 		font-size: 2.2rem;
 	}
 
-	#blue-draggable, #yellow-draggable, #green-draggable {
+	#blue-draggable, #yellow-draggable, #green-draggable, #red-draggable {
 		display: none;
 	}
 
@@ -852,5 +946,4 @@ svg#graphEightCyber {
 		footer, .vertical-title p, .vertical-title img, .empty-white {
 			font-size: 1.5rem;
 		}
-
 	}

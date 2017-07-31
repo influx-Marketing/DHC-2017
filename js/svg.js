@@ -1,3 +1,106 @@
+// HOMEPAGE SVG
+$(document).ready(function() {
+  $("#whiteCircleOneH1").hover(
+    function() {
+      $("#redChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#spottyChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartOneH1").fadeTo(900, 1, 'linear');
+      $("#spottyChartOneH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#spottyCircleOneH1").hover(
+    function() {
+      $("#redChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#whiteChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartOneH1").fadeTo(900, 1, 'linear');
+      $("#whiteChartOneH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#redCircleOneH1").hover(
+    function() {
+      $("#spottyChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#whiteChartOneH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#spottyChartOneH1").fadeTo(900, 1, 'linear');
+      $("#whiteChartOneH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#whiteCircleTwoH1").hover(
+    function() {
+      $("#redChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#spottyChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartTwoH1").fadeTo(900, 1, 'linear');
+      $("#spottyChartTwoH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#spottyCircleTwoH1").hover(
+    function() {
+      $("#redChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#whiteChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartTwoH1").fadeTo(900, 1, 'linear');
+      $("#whiteChartTwoH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#redCircleTwoH1").hover(
+    function() {
+      $("#spottyChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+      $("#whiteChartTwoH1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#spottyChartTwoH1").fadeTo(900, 1, 'linear');
+      $("#whiteChartTwoH1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+// BCP SVG #ONE
+$(document).ready(function() {
+  $("#redChartBCP1").hover(
+    function() {
+      $("#spottyChartBCP1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#spottyChartBCP1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#spottyChartBCP1").hover(
+    function() {
+      $("#redChartBCP1").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#redChartBCP1").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+
 // BCP SVG #TWO
 $(document).ready(function() {
   $("#blueChartBCP2").hover(
@@ -775,6 +878,46 @@ $(document).ready(function() {
       $("#spottyChartC8").fadeTo(900, 1, 'linear');
       $("#greenChartC8").fadeTo(900, 1, 'linear');
       $("#greyChartC8").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+// CYBER SVG #NINE
+$(document).ready(function() {
+  $("#orangeChartC9").hover(
+    function() {
+      $("#blackChartC9").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greenChartC9").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#blackChartC9").fadeTo(900, 1, 'linear');
+      $("#greenChartC9").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#blackChartC9").hover(
+    function() {
+      $("#orangeChartC9").not(this).fadeTo(800, 0.2, 'linear');
+      $("#greenChartC9").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#orangeChartC9").fadeTo(900, 1, 'linear');
+      $("#greenChartC9").fadeTo(900, 1, 'linear');
+    }
+  );
+})
+
+$(document).ready(function() {
+  $("#greenChartC9").hover(
+    function() {
+      $("#orangeChartC9").not(this).fadeTo(800, 0.2, 'linear');
+      $("#blackChartC9").not(this).fadeTo(800, 0.2, 'linear');
+    },
+    function() {
+      $("#orangeChartC9").fadeTo(900, 1, 'linear');
+      $("#blackChartC9").fadeTo(900, 1, 'linear');
     }
   );
 })
